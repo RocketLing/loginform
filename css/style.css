@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.wave{
+    position: fixed;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 70px;
+    padding: 0 30px;
+}
+
+.img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.img img{
+    width: 700px;
+}
+
+.login-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.avatar{
+    width: 100px;
+    border: none;
+    border-radius: 50%;
+}
+
+form{
+    width: 360px;
+}
+
+form h2{
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    color: rgba(46, 61, 70, 0.815);
+}
+
+.login-container .input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid;
+    transition: .3s;
+}
+
+.input-div.two {
+    margin-bottom: 4px;
+}
+
+.i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i i{
+    color: rgb(135, 207, 235, 0.623);
+    transition: .3s;
+}
+
+.input-div > div {
+    position: relative;
+    height: 50px;    
+}
+
+.input-div > div > h5{
+    position: absolute;
+    left: 20px;
+    top: 65%;
+    transform: translateX(-50%);
+    color: cornflowerblue;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.input-div.focus > div > h5{
+	top: -5px;
+	font-size: 15px;
+}
+
+.input-div.focus > .i > i{
+	color: skyblue;
+}
+
+.input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 6%;
+    left: 55px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    color: skyblue;
+}
+
+a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: skyblue;
+    font-size: 12px;
+    transition: .3s;
+}
+
+a:hover{
+    color: rgba(62, 109, 128, 0.829);
+}
+
+.btn{
+    display: inline;
+    width: 60%;
+    height: 40px;
+    border-radius: 15px;
+    margin: 15px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    background-color: #6C63FF;
+    cursor: pointer;
+    font-weight: 600;
+    color: aliceblue;
+    transition: .5s;
+}
+
+.btn:hover {
+     background-color: rgba(100, 148, 237, 0.726);
+}
+
+.remember label{
+    display: block;
+    text-align: left;
+    color: rgba(46, 61, 70, 0.815);
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+p{
+    font-size: 12px;
+    text-align: right;
+    color: rgba(46, 61, 70, 0.815);
+}
+a.signup {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    font-weight: 600;
+    color: skyblue;
+    font-size: 12px;
+    transition: .3s;
+}
+
+a:hover.signup{
+    color: rgba(62, 109, 128, 0.829);
+}
+
+
+/* --------- RESPONSIVE --------- */
+@media screen and (max-width: 1050px){
+	.container{
+		grid-gap: 50px;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 290px;
+	}
+
+	.login-container h2{
+        font-size: 36px;
+        margin: 8px 0;
+	}
+
+	.img img{
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.container{
+		grid-template-columns: 1fr;
+	}
+
+	.img{
+		display: none;
+	}
+
+	.wave{
+		display: none;
+	}
+
+	.login-container{
+		justify-content: center;
+	}
+}
